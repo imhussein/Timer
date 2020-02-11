@@ -6,17 +6,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>JS</title>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <style>
+    body {
+      font-family: "Operator Mono";
+    }
+
+  </style>
 </head>
 
 <body>
-  <svg width="400" height="400">
-    <circle r="100" fill="transparent" stroke-dasharray="628.3185307179587" stroke-dashoffset="0" stroke="#666EE8"
-      stroke-width="3" cx="200" cy="200" transform="rotate(-90 200 200)">
-    </circle>
-  </svg>
-  <input type="text" name="duration" value="30" id="duration">
-  <button id="start">Start</button>
-  <button id="pause">Pause</button>
+  <nav class="blue-grey darken-4" style="line-height: 50px; height: 50px; margin-bottom: 30px;">
+    <div class="nav-wrapper">
+      <div class="container">
+        <a href="#" class="brand-logo">App</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col m4">
+        <div class="dropdown">
+          <div class="input-field">
+            <input type="text" name="duration" value="30" id="duration">
+            <label for="duration">Search</label>
+          </div>
+          <ul id="target" class="collapsible">
+          </ul>
+        </div>
+      </div>
+      <div class="col m4"></div>
+      <div class="col m4">
+        <div class="input-field">
+          <input type="text" name="movie" value="30" id="movie">
+          <label for="movie">Search</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.collapsible');
+      var instances = M.Collapsible.init(elems);
+    });
+
+  </script>
   <script src="rxjs.js"></script>
 </body>
 
